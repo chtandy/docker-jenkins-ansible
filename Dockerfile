@@ -2,7 +2,11 @@ FROM jenkins/jenkins:lts
 USER root
 RUN set -eux && \
     apt-get update && \
-    apt-get install sudo python software-properties-common -y && \
+    apt-get install \
+    sudo \
+    python \
+    software-properties-common \
+    vim -y && \
     apt-add-repository ppa:ansible/ansible -y && \
     apt-get install ansible -y && \
     rm -rf /var/lib/apt/lists/* && \
