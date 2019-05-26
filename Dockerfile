@@ -5,9 +5,12 @@ RUN set -eux && \
     apt-get install \
     sudo \
     python \
+    python-pip \
     software-properties-common \
     vim -y && \
-    apt-add-repository ppa:ansible/ansible -y && \
+    apt-add-repository ppa:ansible/ansible && \
+    rm -rf /etc/apt/sources.list.d/ansible-ubuntu-ansible-eoan.list && \
+    apt-get update && \
     apt-get install ansible -y && \
     rm -rf /var/lib/apt/lists/* && \
     apt-get clean && \
