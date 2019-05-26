@@ -10,5 +10,5 @@ RUN set -eux && \
     echo "jenkins ALL=NOPASSWD: ALL" >> /etc/sudoers && \
     echo "Host *" >> /etc/ssh/ssh_config && \
     echo "    StrictHostKeyChecking no" >> /etc/ssh/ssh_config && \
-    echo "    UserKnownHostsFile /dev/null" >> /etc/ssh/ssh_config
+    echo "    UserKnownHostsFile /dev/null" >> /etc/ssh/ssh_config 
 USER jenkins
