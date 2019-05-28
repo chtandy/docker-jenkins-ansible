@@ -1,16 +1,6 @@
 FROM jenkins/jenkins:lts                                                                                                                  
 USER root
-RUN set -eux && \
-    apt-get update && \
-    apt-get install \
-    sudo \
-    python \
-    wget \
-    curl \
-    zlib1g-dev \
-    rsync \
-    python-pip \
-    vim -y
+RUN set -eux && apt-get update && apt-get install sudo python wget curl zlib1g-dev rsync python-pip vim -y
 ##  ansible
 RUN apt-get install software-properties-common -y && \
     apt-add-repository ppa:ansible/ansible && \
