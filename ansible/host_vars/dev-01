@@ -1,5 +1,0 @@
-region: gcp
-ansible_ssh_host: {{host ip}}
-ansible_ssh_port: 22
-ansible_ssh_user: {{user id}}
-ansible_ssh_pass: {{password}}
