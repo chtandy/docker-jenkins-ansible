@@ -8,6 +8,7 @@ RUN set -eux && \
     wget \
     curl \
     zlib1g-dev \
+    rsync \
     python-pip \
     vim -y
 ##  ansible
